@@ -12,12 +12,12 @@ function Header({isOpen, toggleMenu, title, setTitle}) {
           <a href="#" className="text-white text-2xl lg:text-5xl font-extralight">IKWAN RESTO</a>
           <div className="hidden lg:flex">
             <ul className="flex flex-row items-center lg:pr-8">
-              <li onClick={() => setTitle('HOME')} className="hover-menu"><a href="Home">HOME</a></li>
-              <li onClick={() => setTitle('MENU')} className="hover-menu"><a href="Menu">MENU</a></li>
-              <li onClick={() => setTitle('RESERVATION')} className="hover-menu"><a href="Reservation">RESERVATION</a></li>
+              <li onClick={() => setTitle('HOME')} className="hover-menu"><a href="#">HOME</a></li>
+              <li onClick={() => setTitle('MENU')} className="hover-menu"><a href="#">MENU</a></li>
+              <li onClick={() => setTitle('RESERVATION')} className="hover-menu"><a href="#">RESERVATION</a></li>
             </ul>
             <button type="button">
-              <a className="button-orderOnline" href="OrderOnline">ORDER ONLINE</a>
+              <a onClick={() => setTitle('ORDER ONLINE')} className="button-orderOnline" href="#">ORDER ONLINE</a>
             </button>
           </div>
           <div className="lg:hidden">
@@ -26,6 +26,7 @@ function Header({isOpen, toggleMenu, title, setTitle}) {
             </button>
           </div>
         </div>
+        {/* listMenu small */}
         <div
           id="listMenu"
           className={`flex absolute left-0 bg-gray-900 justify-center w-full mt-20 pr-3 lg:hidden transform origin-top transition-all duration-300 ease-in-out 
@@ -33,13 +34,13 @@ function Header({isOpen, toggleMenu, title, setTitle}) {
           
         >
           <ul className="grid grid-cols-1 place-items-center text-gray-200">
-            <li className="hover-menu-2"><a href="Home">HOME</a></li>
-            <li className="hover-menu-2"><a href="Menu">MENU</a></li>
-            <li className="hover-menu-2"><a href="Reservation">RESERVATION</a></li>
-            <li className="hover-menu-2"><a href="OrderOnline">ORDER ONLINE</a></li>
+            <li onClick={() => setTitle('HOME')} className="hover-menu-2"><a href="#">HOME</a></li>
+            <li onClick={() => setTitle('MENU')} className="hover-menu-2"><a href="#">MENU</a></li>
+            <li onClick={() => setTitle('RESERVATION')} className="hover-menu-2"><a href="#">RESERVATION</a></li>
+            <li onClick={() => setTitle('ORDER ONLINE')} className="hover-menu-2"><a href="#">ORDER ONLINE</a></li>
           </ul>
         </div>
-        <div className="flex flex-col items-center justify-center h-30 mt-45 lg:mt-40">
+        <div className="flex flex-col items-center justify-center h-30 mt-55 lg:mt-40">
           <h1 className="custom-text1">{title}</h1>
         </div>
       </div>

@@ -16,7 +16,7 @@
   @apply w-[100%] max-w-[1700px] my-[0] mx-auto;
 }
 .custom-text1{
-  @apply text-4xl lg:text-5xl font-extralight h-[47px];
+  @apply text-2xl lg:text-5xl font-extralight h-[47px];
 }
 
 /* :root {
